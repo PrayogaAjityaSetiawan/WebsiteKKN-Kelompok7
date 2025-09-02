@@ -89,9 +89,9 @@ export default function Home() {
         <HoverExpand
           images={images}
           initialSelectedIndex={0}
-          thumbnailHeight={400}
-          modalImageSize={600}
-          maxThumbnails={11}
+          thumbnailHeight={200}
+          modalImageSize={400}
+          maxThumbnails={5}
         />
       </div>
     </section>
