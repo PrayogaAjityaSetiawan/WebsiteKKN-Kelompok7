@@ -1,5 +1,6 @@
 "use client";
 import { FocusCards } from "@/components/ui/focus-cards";
+import HoverExpand from "@/components/ui/hover-expand";
 import { InfiniteMovingCards } from "@/components/ui/infinite-moving-cards";
 import { TextScroll } from "@/components/ui/text-scroll";
 
@@ -35,11 +36,11 @@ export default function Home() {
   text="KKN Sumberjaya 2025" 
   default_velocity={5}/>
   </div>
-  <div className="my-10 md:mx-20">
+  <div className="my-10 ">
     <div className="flex flex-col gap-2 md:flex-row justify-between md:items-center mb-5">
       <div className="flex flex-col  gap-2 md:w-1/2 z-10">
-        <span className="text-gray-500 font-semibold">Our Family</span>
-        <h1 className="text-[35px] md:text-[40px] leading-none font-bold">Together as One Heart</h1>
+        <span className="text-gray-500 font-semibold">keluarga kami</span>
+        <h1 className="text-[35px] md:text-[40px] leading-none font-bold">Bersama sebagai Satu Hati</h1>
       </div>
       <div className="md:w-1/2 z-10">
         <span className="text-gray-500 font-semibold">Kebersamaan kami bukan hanya dalam kegiatan, tapi juga dalam ikatan kekeluargaan yang tumbuh dari setiap cerita dan pengalaman. </span>
@@ -60,7 +61,7 @@ export default function Home() {
       {title: "Alista Nur Aprilia", src: "./alista.jpg"},
     ]} />
 
-    <div className="h-[40rem] rounded-md flex flex-col antialiased bg-white dark:bg-black dark:bg-grid-white/[0.05] items-center justify-center relative overflow-hidden">
+    <div className="h-[40rem] rounded-md flex flex-col antialiased  dark:bg-black dark:bg-grid-white/[0.05] items-center justify-center relative overflow-hidden">
     <div className="flex flex-col gap-2 md:gap-0 md:flex-row justify-between md:items-center mb-5">
       <div className="flex flex-col md:gap-2 md:w-1/2 z-10">
         <span className="text-gray-500 font-semibold">Suara Hati</span>
@@ -77,11 +78,43 @@ export default function Home() {
       />
     </div>
 
+
+    <section className="mx-auto w-full  rounded-[24px] border-black/5 p-2 shadow-sm md:rounded-t-[44px]">
+      <div className="relative mx-auto flex w-full flex-col items-center justify-center  rounded-[24px] border border-black/5 bg-neutral-800/5  shadow-sm  md:gap-8 md:rounded-b-[20px] md:rounded-t-[40px] ">
+        <article className="relative z-50 mt-20 flex flex-col  items-center justify-center ">
+          <h1 className="max-w-2xl text-center text-5xl font-semibold tracking-tight ">
+            Dokumentasi Kegiatan Kita
+          </h1>
+        </article>
+        <HoverExpand
+          images={images}
+          initialSelectedIndex={0}
+          thumbnailHeight={400}
+          modalImageSize={600}
+          maxThumbnails={11}
+        />
+      </div>
+    </section>
+
   </div>
 </div>
     
   );
 }
+
+const images = [
+  "./bg1.jpg",
+  "./bg2.jpg",
+  "./bg3.jpg",
+  "./bg4.jpg",
+  "./bg5.jpg",
+  "./bg6.jpg",
+  "./bg7.jpg",
+  "./bg8.jpg",
+  "./bg9.jpg",
+  "./bg10.jpg",
+  "./bg11.jpg",
+]
 
 
 const testimonials = [
